@@ -851,7 +851,8 @@ img {
 
 .page-hero h1 {
   color: #fff;
-  max-width: 820px;
+  max-width: 600px;
+  font-size: 50px;
 }
 
 .page-hero .lead {
@@ -1131,7 +1132,7 @@ img {
   .insta-stats strong {
     font-size: 20px !important;
   }
- 
+
   .page-hero h1 {
     font-size: 25px !important;
   }
