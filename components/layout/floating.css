@@ -1,0 +1,30 @@
+.wa-float {
+  position: fixed; right: 24px; bottom: 24px; z-index: 900; width: 60px; height: 60px; border-radius: 50%;
+  background: #25d366; color: #fff; place-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.4);
+  transition: transform 0.3s var(--ease-out);
+}
+.wa-float::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: #25d366; animation: wa-pulse 2.2s ease-out infinite; z-index: -1; }
+@keyframes wa-pulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.8); opacity: 0; } }
+.wa-float:hover { transform: scale(1.08); color: #fff; }
+.wa-tip { position: absolute; right: 72px; top: 50%; transform: translateY(-50%) translateX(8px); white-space: nowrap; background: var(--gs-navy-900); color: #fff; padding: 8px 14px; border-radius: 10px; font-size: 0.82rem; font-weight: 600; opacity: 0; transition: opacity 0.3s, transform 0.3s; pointer-events: none; }
+.wa-float:hover .wa-tip { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+.mobile-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 900; display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 6px; padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-top: 1px solid var(--gs-line); box-shadow: 0 -8px 30px rgba(11,42,91,0.1);
+}
+.mobile-cta a { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 6px; border-radius: 12px; font-family: var(--ff-heading); font-weight: 700; font-size: 0.8rem; line-height: 1.1; background: var(--gs-sky); color: var(--gs-navy); white-space: nowrap; }
+.mobile-cta a.wa { background: #25d366; color: #fff; }
+.mobile-cta a.primary { background: var(--gs-yellow); color: var(--gs-navy-900); }
+/* Reserve space so the fixed bar never hides the last content of a page/section */
+@media (max-width: 767.98px) {
+  body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
+  html { scroll-padding-bottom: 80px; }
+  .site-footer .footer-bottom { padding-bottom: 26px; }
+}
+@media (max-width: 400px) {
+  .mobile-cta { padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); gap: 5px; }
+  .mobile-cta a { font-size: 0.72rem; padding: 10px 4px; gap: 4px; }
+  .mobile-cta a svg { width: 15px; height: 15px; }
+  body { padding-bottom: calc(48px + env(safe-area-inset-bottom)); }
+}

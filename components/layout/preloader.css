@@ -1,0 +1,6 @@
+.preloader { position: fixed; inset: 0; z-index: 2000; background: var(--gs-navy-900); display: grid; place-items: center; }
+.pre-inner { text-align: center; }
+.pre-ring { width: 64px; height: 64px; margin: 0 auto 22px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.12); border-top-color: var(--gs-yellow); border-right-color: var(--gs-green); }
+.pre-word { font-family: var(--ff-heading); font-weight: 800; letter-spacing: 0.3em; color: #fff; font-size: 0.95rem; overflow: hidden; }
+.pre-word span { display: inline-block; transform: translateY(120%); }
+body.is-loading { overflow: hidden; }
