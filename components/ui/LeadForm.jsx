@@ -9,6 +9,8 @@ import Icon from './Icon';
  */
 export default function LeadForm({ compact = false, title = 'Get your free site visit', intent = 'Free Site Visit', dark = false }) {
   const [state, setState] = useState('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const [data, setData] = useState({ name: '', phone: '', city: '', type: 'Residential (Home)', bill: '', message: '' });
 
   const update = (e) => setData({ ...data, [e.target.name]: e.target.value });
@@ -21,10 +23,31 @@ export default function LeadForm({ compact = false, title = 'Get your free site 
   const submit = async (e) => {
     e.preventDefault();
     setState('sending');
+    setErrorMessage('');
+
     try {
-      const res = await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...data, intent, page: window.location.pathname }) });
-      setState(res.ok ? 'done' : 'error');
-    } catch {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, intent, page: window.location.pathname }),
+      });
+
+      const json = await res.json().catch(() => null);
+      // console.log('Lead form API response:', { status: res.status, ok: res.ok, data: json });
+
+      if (res.ok && json?.ok) {
+        if (json?.message) {
+          setSuccessMessage(json.message);
+        }
+        setState('done');
+      } else {
+        console.warn('Lead form submission failed:', json);
+        setErrorMessage(json?.message || `Could not send right now — please use WhatsApp or call ${site.phone}.`);
+        setState('error');
+      }
+    } catch (err) {
+      console.error('Lead form submit error:', err);
+      setErrorMessage(`Could not send right now — please use WhatsApp or call ${site.phone}.`);
       setState('error');
     }
   };
@@ -35,8 +58,8 @@ export default function LeadForm({ compact = false, title = 'Get your free site 
         <div className="text-center py-4">
           <div className="icon-badge mx-auto" style={{ background: 'var(--gs-green)', color: '#fff' }}><Icon name="check" /></div>
           <h3>Thank you, {data.name.split(' ')[0]}!</h3>
-          <p>Our team will call you on {data.phone} within one working day to schedule your visit.</p>
-          <a href={waLink()} target="_blank" rel="noopener" className="btn-gs green"><Icon name="whatsapp" size={18} /> Send details on WhatsApp too</a>
+          <p>{successMessage || `Our team will call you on ${data.phone} within one working day to schedule your visit.`}</p>
+          {/* <a href={waLink()} target="_blank" rel="noopener" className="btn-gs green"><Icon name="whatsapp" size={18} /> Send details on WhatsApp too</a> */}
         </div>
       </div>
     );
@@ -85,9 +108,10 @@ export default function LeadForm({ compact = false, title = 'Get your free site 
           <button type="submit" className="btn-gs" disabled={state === 'sending'}>
             {state === 'sending' ? 'Sending…' : `Request ${intent}`} <span className="ico"><Icon name="arrow" size={18} /></span>
           </button>
-          <a href={waLink()} target="_blank" rel="noopener" className="wa-alt"><Icon name="whatsapp" size={17} /> or send on WhatsApp</a>
+          
+          {/* <a href={waLink()} target="_blank" rel="noopener" className="wa-alt"><Icon name="whatsapp" size={17} /> or send on WhatsApp</a> */}
         </div>
-        {state === 'error' && <p className="text-danger small mb-0">Could not send right now — please use WhatsApp or call {site.phone}.</p>}
+        {state === 'error' && <p className="text-danger small mb-0">{errorMessage || `Could not send right now — please use WhatsApp or call ${site.phone}.`}</p>}
       </div>
     </form>
   );
