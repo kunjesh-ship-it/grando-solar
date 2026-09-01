@@ -46,8 +46,8 @@ export default async function SolutionPage({ params }) {
       <section className="section">
         <div className="container">
           <div className="row g-5 align-items-center">
-            <div className="col-lg-6">
-              <SectionHeader tag="Overview" title={s.title} />
+            <div className="col-lg-6 solution-description-section">
+              <SectionHeader tag="Overview" title={s.title}  />
               <p className="reveal" style={{ fontSize: '1.08rem' }}>{s.intro}</p>
               <h3 className="h4 mt-4 reveal">Ideal for</h3>
               <ul className="check-list reveal">{s.forWhom.map((f) => <li key={f}>{f}</li>)}</ul>
@@ -75,7 +75,7 @@ export default async function SolutionPage({ params }) {
         </div>
       </section>
 
-      <section className="section theme-navy bg-grid" id="included">
+      <section className="section theme-navy bg-grid what-includ-section" id="included">
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-5">

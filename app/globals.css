@@ -1028,9 +1028,6 @@ img {
   }
 }
 
-@media (max-width: 575.98px) {}
-
-
 
 
 @media (max-width: 1199.98px) {
@@ -1097,14 +1094,15 @@ img {
 
   .hero-title {
     font-size: 25px !important;
-    max-width: 200px;
+    max-width: 200px !important;
   }
 
   .hero-sub {
     font-size: 15px;
   }
 
-  .hero-ctas .btn-gs.lg {
+  .hero-ctas .btn-gs.lg,
+  .btn-gs.lg {
     padding-block: 9px !important;
     font-size: 12px;
   }
@@ -1125,7 +1123,37 @@ img {
   .feature-img .float-badge strong {
     font-size: 18px !important;
   }
-  
+
+  .insta-card h3 {
+    font-size: 22px !important;
+  }
+
+  .insta-stats strong {
+    font-size: 20px !important;
+  }
+
+  .page-hero h1 {
+    font-size: 25px !important;
+  }
+
+  .feature-img .float-badge {
+    width: 90%;
+    left: 0 !important;
+    right: 0;
+    margin-inline: auto;
+  }
+
+  .solution-description-section .reveal {
+    font-size: 15px !important;
+  }
+
+  .what-includ-section ul li {
+    font-size: 15px !important;
+  }
+
+  .stat-num {
+    font-size: 20px !important;
+  }
 }
 
 @media(max-width: 360px) {
