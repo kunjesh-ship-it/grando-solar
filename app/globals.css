@@ -1142,6 +1142,11 @@ img {
     left: 0 !important;
     right: 0;
     margin-inline: auto;
+    display: block !important;
+  }
+
+  .feature-img .float-badge .icon-badge {
+    margin-bottom: 15px !important;
   }
 
   .solution-description-section .reveal {
@@ -1155,6 +1160,13 @@ img {
   .stat-num {
     font-size: 20px !important;
   }
+
+  .icon-badge {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+
 }
 
 @media(max-width: 360px) {
