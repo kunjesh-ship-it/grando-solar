@@ -26,12 +26,12 @@ export default function AboutIntro() {
             <p className="reveal">
               We are an authorised channel and franchise partner of Waaree Energies and a government-approved channel partner with Gujarat’s DISCOMs, which means subsidy, approvals and net metering are handled in-house.
             </p>
-            <div className="tick-grid cols-2 mt-4 mb-4" data-stagger>
+            {/* <div className="tick-grid cols-2 mt-4 mb-4" data-stagger>
               <div className="tick-card reveal"><span className="icon-badge"><Icon name="ruler" /></span><h3>Free 3D design</h3><p>Site visit, shadow analysis and layout before you pay.</p></div>
               <div className="tick-card reveal"><span className="icon-badge"><Icon name="wind" /></span><h3>Storm-safe build</h3><p>HDGI virgin steel, SS304, Hilti — no site welding.</p></div>
               <div className="tick-card reveal"><span className="icon-badge"><Icon name="rupee" /></span><h3>Subsidy + loan</h3><p>100% loan assistance and direct subsidy credit.</p></div>
               <div className="tick-card reveal"><span className="icon-badge"><Icon name="monitor" /></span><h3>Lifetime support</h3><p>Monitoring, AMC and service teams in 5 cities.</p></div>
-            </div>
+            </div> */}
             <Link href="/about-us" className="link-arrow reveal">More about us <span className="circle"><Icon name="arrow" size={18} /></span></Link>
           </div>
         </div>

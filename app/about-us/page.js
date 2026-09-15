@@ -49,7 +49,7 @@ export default function AboutPage() {
             </div>
             <div className="col-lg-6">
               <div className="feature-img reveal-img">
-                <Image src="/images/structure-wide.jpg" alt="Grando Solar elevated storm-safe structure" fill sizes="(max-width: 991px) 100vw, 50vw" />
+                <Image src="/images/structure-wide.png" alt="Grando Solar elevated storm-safe structure" fill sizes="(max-width: 991px) 100vw, 50vw" />
                 <div className="float-badge">
                   <span className="icon-badge"><Icon name="pin" /></span>
                   <div><strong>5 cities</strong><span>Surat · Vadodara · Vapi · Bharuch · Ahmedabad</span></div>
