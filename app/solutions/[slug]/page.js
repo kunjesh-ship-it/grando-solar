@@ -36,7 +36,7 @@ export default async function SolutionPage({ params }) {
         breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Solutions', path: '/solutions' }, { name: s.title, path: `/solutions/${s.slug}` }]),
         serviceJsonLd({ name: s.title, description: s.short, path: `/solutions/${s.slug}` }),
       ]} />
-      <PageHero tag={s.title} title={s.hero} lead={s.short} crumbs={[{ name: 'Solutions', href: '/solutions' }, { name: s.title }]} image={s.image}>
+      <PageHero tag={s.title} title={s.hero} lead={s.short} crumbs={[{ name: 'Solutions', href: '/solutions' }, { name: s.title }]} image={s.heroImage || s.image}>
         <div className="d-flex flex-wrap gap-3 mt-4 reveal">
           <Link href="/contact-us" className="btn-gs lg">{s.cta} <span className="ico"><Icon name="arrow" size={18} /></span></Link>
           <a href="#included" className="btn-gs lg outline">What’s included</a>
@@ -54,7 +54,7 @@ export default async function SolutionPage({ params }) {
             </div>
             <div className="col-lg-6">
               <div className="feature-img reveal-img">
-                <Image src={s.image} alt={s.title} fill sizes="(max-width: 991px) 100vw, 50vw" />
+                <Image src={s.sectionImage || s.image} alt={s.title} fill sizes="(max-width: 991px) 100vw, 50vw" />
               </div>
             </div>
           </div>

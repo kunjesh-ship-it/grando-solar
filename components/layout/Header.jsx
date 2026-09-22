@@ -49,7 +49,7 @@ export default function Header() {
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="container d-flex align-items-center justify-content-between">
           <Link href="/" className="brand" aria-label="Grando Solar home">
-            <Image src="/images/brand/logo.png" alt="Grando Solar Energy" width={190} height={40}  />
+            <Image src="/images/brand/logo.png" alt="Grando Solar Energy" width={190} height={40} className='object-cover'  />
           </Link>
 
           <nav className="main-nav d-none d-lg-flex" aria-label="Primary">

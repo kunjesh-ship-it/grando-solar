@@ -36,7 +36,7 @@ export default async function ServicePage({ params }) {
         breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: s.title, path: `/services/${s.slug}` }]),
         serviceJsonLd({ name: s.title, description: s.short, path: `/services/${s.slug}` }),
       ]} />
-      <PageHero tag="Service" title={s.title} lead={s.short} crumbs={[{ name: 'Services', href: '/services' }, { name: s.title }]} image={s.image} />
+      <PageHero tag="Service" title={s.title} lead={s.short} crumbs={[{ name: 'Services', href: '/services' }, { name: s.title }]} image={s.heroImage || s.image} />
 
       <section className="section">
         <div className="container">

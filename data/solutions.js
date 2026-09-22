@@ -4,6 +4,8 @@ export const solutions = [
     title: 'Residential Rooftop Solar',
     short: 'Cut your home electricity bill with a subsidised rooftop plant designed for your roof.',
     icon: 'home',
+    heroImage: '/images/banner-1.png',
+    sectionImage: '/images/home-roof.jpg',
     image: '/images/home-roof.jpg',
     hero: 'Your roof can pay your electricity bill.',
     intro:
@@ -37,7 +39,9 @@ export const solutions = [
     title: 'Housing Society Solar',
     short: 'Common-meter solar for lifts, pumps and lighting — with ₹18,000/kW subsidy support.',
     icon: 'building',
-    image: '/images/rooftop-panels.jpg',
+    heroImage: '/images/banner-2.png',
+    sectionImage: '/images/housing-society-solar.png',
+    image: '/images/housing-society-solar.png',
     hero: 'Reduce society maintenance with common-area solar.',
     intro:
       'Lifts, water pumps, corridor lighting and clubhouses run all day on the society’s common meter. A shared rooftop plant offsets that consumption, lowers monthly maintenance for every member and is eligible for a ₹18,000 per kW subsidy for group housing societies and RWAs.',
@@ -69,7 +73,9 @@ export const solutions = [
     title: 'Commercial Solar',
     short: 'Shops, offices, hospitals, schools and hotels — lower operating cost from day one.',
     icon: 'store',
-    image: '/images/panel-array.jpg',
+    heroImage: '/images/banner-3.png',
+    sectionImage: '/images/commercial-solar.png',
+    image: '/images/commercial-solar.png',
     hero: 'Turn your biggest fixed cost into a fixed saving.',
     intro:
       'Commercial buildings consume power during exactly the hours the sun is strongest. Rooftop solar on offices, hospitals, schools, hotels, malls and showrooms offsets daytime load at a fraction of the commercial tariff, with accelerated depreciation benefits for businesses.',
@@ -99,6 +105,8 @@ export const solutions = [
     title: 'Industrial Solar',
     short: 'High-capacity solar for factory rooftops and industrial estates — engineered to reduce your per-unit production cost.',
     icon: 'factory',
+    heroImage: '/images/banner-4.png',
+    sectionImage: '/images/industrial-solar.png',
     image: '/images/panel-array.jpg',
     hero: 'Your factory roof is an untapped energy asset.',
     intro:
@@ -129,7 +137,9 @@ export const solutions = [
     title: 'Ground-Mounted Solar',
     short: 'Open land plants when the roof is not enough — captive or for industrial use.',
     icon: 'sun',
-    image: '/images/panel-array.jpg',
+    heroImage: '/images/banner-5.png',
+    sectionImage: '/images/ground-mounted-solar.png',
+    image: '/images/banner-5.png',
     hero: 'When the roof runs out, the ground steps in.',
     intro:
       'Ground-mounted plants let industries, institutions and landowners install larger capacities with optimal tilt and orientation. They are ideal for factories with spare land, agricultural plots near the unit and campuses with open ground.',
@@ -157,7 +167,9 @@ export const solutions = [
     title: 'Solar Carport / Parking Shade',
     short: 'Shade for your vehicles, power for your building — one storm-safe structure.',
     icon: 'car',
-    image: '/images/structure-wide.jpg',
+    heroImage: '/images/banner-6.png',
+    sectionImage: '/images/solar-carport-parking-shade.png',
+    image: '/images/banner-6.png',
     hero: 'Park in the shade. Power the building.',
     intro:
       'A solar carport turns open parking into a covered, power-generating asset. Grando Solar’s elevated storm-safe structures use HDGI virgin steel, SS304 fasteners and Hilti anchoring, so the shade is as durable as the plant on top of it.',

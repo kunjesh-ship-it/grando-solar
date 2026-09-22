@@ -4,7 +4,7 @@ export const posts = [
     title: 'Grando Solar’s Easy Installation Process',
     excerpt: 'From the free site visit to net metering — what actually happens when you go solar with Grando, step by step.',
     date: '2025-07-08',
-    image: '/images/team-carport.jpg',
+    image: '/images/team-image.png',
     category: 'Process',
     body: [
       'Going solar feels complicated only because most companies never explain the process. At Grando Solar, every project follows the same six steps, and you always know which step you are on.',
