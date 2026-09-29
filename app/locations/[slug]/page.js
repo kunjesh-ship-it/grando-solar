@@ -67,7 +67,7 @@ export default async function LocationPage({ params }) {
                 <p className="d-flex gap-2 mb-4"><Icon name="bolt" size={20} className="flex-shrink-0 text-navy" /> DISCOM: {l.discom}</p>
                 <div className="d-flex flex-wrap gap-2">
                   <a href={l.map} target="_blank" rel="noopener" className="btn-gs navy sm">Get Directions</a>
-                  <a href={site.whatsappHref} target="_blank" rel="noopener" className="btn-gs green sm"><Icon name="whatsapp" size={16} /> WhatsApp</a>
+                  <a href={l.whatsappHref} target="_blank" rel="noopener" className="btn-gs green sm"><Icon name="whatsapp" size={16} /> WhatsApp</a>
                 </div>
               </div>
             </div>

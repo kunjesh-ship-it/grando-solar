@@ -6,6 +6,11 @@ import './floating.css';
 export default function FloatingCta() {
   return (
     <>
+
+      <a href={site.phoneHref} rel="noopener" className="call-float d-none d-md-grid" aria-label="Call Now">
+        <Icon name="phone" size={28} />
+        <span className="wa-tip">Call Now</span>
+      </a>
       <a href={site.whatsappHref} target="_blank" rel="noopener" className="wa-float d-none d-md-grid" aria-label="Chat on WhatsApp">
         <Icon name="whatsapp" size={28} />
         <span className="wa-tip">Chat with us</span>

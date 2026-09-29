@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHero from '@/components/sections/PageHero';
 import SectionHeader from '@/components/ui/SectionHeader';
+import CIProjects from '@/components/home/CIProjects';
+import ResidentialProjects from '@/components/home/ResidentialProjects';
 import Icon from '@/components/ui/Icon';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import WhatWeGive from '@/components/sections/WhatWeGive';
@@ -75,6 +77,9 @@ export default async function SolutionPage({ params }) {
         </div>
       </section>
 
+      <CIProjects />
+      <ResidentialProjects />
+      
       <section className="section theme-navy bg-grid what-includ-section" id="included">
         <div className="container">
           <div className="row g-5">

@@ -1,6 +1,8 @@
 import PageHero from '@/components/sections/PageHero';
 import SolutionsGrid from '@/components/sections/SolutionsGrid';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import CIProjects from '@/components/home/CIProjects';
+import ResidentialProjects from '@/components/home/ResidentialProjects';
 import FaqSection from '@/components/sections/FaqSection';
 import ContactPanel from '@/components/sections/ContactPanel';
 import JsonLd from '@/components/ui/JsonLd';
@@ -19,6 +21,8 @@ export default function SolutionsPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'Solutions', path: '/solutions' }])} />
       <PageHero tag="Solutions" title="Solar for every roof, every load, every budget." lead="Choose the solution that matches your property. Every one is built on the same storm-safe structure, Tier-1 components and end-to-end service." crumbs={[{ name: 'Solutions' }]} image="/images/panel-array.jpg" />
       <SolutionsGrid header={false} />
+      <CIProjects />
+      <ResidentialProjects />
       <ProcessTimeline />
       <FaqSection items={homeFaqs.slice(0, 6)} />
       <ContactPanel />

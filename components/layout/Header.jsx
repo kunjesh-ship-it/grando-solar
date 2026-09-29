@@ -35,7 +35,7 @@ export default function Header() {
       <div className="topbar d-none d-lg-block">
         <div className="container d-flex justify-content-between align-items-center">
           <div className="d-flex gap-4">
-            <a href={site.phoneHref}><Icon name="phone" size={14} /> {site.phone}</a>
+            <a href={site.tollFreePhoneHref}><Icon name="phone" size={14} /> {site.tollFreePhone}</a>
             <a href={`mailto:${site.email}`}><Icon name="mail" size={14} /> {site.email}</a>
           </div>
           <div className="d-flex gap-4 align-items-center">
@@ -103,7 +103,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="mobile-nav-foot">
-          <a href={site.phoneHref} className="btn-gs navy w-100 justify-content-center"><Icon name="phone" size={18} /> {site.phone}</a>
+          <a href={site.tollFreePhoneHref} className="btn-gs navy w-100 justify-content-center"><Icon name="phone" size={18} /> {site.tollFreePhone}</a>
           <a href={site.whatsappHref} className="btn-gs green w-100 justify-content-center" target="_blank" rel="noopener"><Icon name="whatsapp" size={18} /> WhatsApp Us</a>
         </div>
       </div>

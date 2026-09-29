@@ -2,6 +2,9 @@
    GRANDO SOLAR — Design System
    Palette derived from the Grando logo + 2026 brochure
    ============================================================ */
+
+
+
 :root {
   --gs-navy: #0b2a5b;
   --gs-navy-900: #071c3d;
@@ -678,7 +681,7 @@ img {
 
 .marquee-track {
   display: inline-flex;
-  gap: 0;
+  gap: 30px;
   will-change: transform;
 }
 
@@ -686,11 +689,13 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  padding: 0 34px;
+  padding: 15px;
   font-family: var(--ff-heading);
   font-weight: 800;
   font-size: 1.25rem;
   color: var(--gs-navy);
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .marquee-item .dot {
@@ -1181,4 +1186,24 @@ img {
   .feature-img .float-badge strong {
     font-size: 14px !important;
   }
+}
+
+.logo-img {
+  max-width: 100px;
+  border-radius: 5px;
+}
+
+.call-float {
+  z-index: 900;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  transition: transform .3s var(--ease-out);
+  background: #25d366;
+  border-radius: 50%;
+  place-items: center;
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  box-shadow: 0 12px 30px #25d36666;
 }

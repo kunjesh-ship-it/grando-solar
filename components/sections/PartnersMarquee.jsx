@@ -27,8 +27,8 @@ export default function PartnersMarquee({ dark = false }) {
         <div className="marquee-track" ref={track}>
           {items.map((p, i) => (
             <span className="marquee-item" key={i}>
-              <span className="dot" />
-              <span>{p.name}<small>{p.note}</small></span>
+              {/* <span className="dot" /> */}
+                <img src={p.src} alt="" className='logo-img' /> <span>{p.name}<small>{p.note}</small></span>
             </span>
           ))}
         </div>

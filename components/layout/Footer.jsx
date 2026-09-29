@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
           <div className="col-md-4">
             <span className="lbl">Call Us</span>
-            <a href={site.phoneHref} className="big">{site.phone}</a>
+            <a href={site.tollFreePhoneHref} className="big">{site.tollFreePhone}</a>
           </div>
           <div className="col-md-4">
             <span className="lbl">Email</span>

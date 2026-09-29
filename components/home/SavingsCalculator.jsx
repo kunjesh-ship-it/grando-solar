@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import SectionHeader from '@/components/ui/SectionHeader';
 import Icon from '@/components/ui/Icon';
@@ -13,17 +13,31 @@ import './home.css';
  */
 const TARIFF = { home: 7, society: 7, business: 9 };
 const GEN_PER_KW = 120;
+// Max kW per property type (home capped by PM Surya Ghar scheme)
+const MAX_KW = { home: 10, society: 500, business: 500 };
+const sliderMax = (type) => {
+  if (type === 'home') return 10000;
+  if (type === 'business') return 300000;
+  return MAX_KW[type] * GEN_PER_KW * TARIFF[type]; // max offset-able bill
+};
 
 const fmt = (n) => `₹${Math.round(n).toLocaleString('en-IN')}`;
 
+const DEFAULT_BILL = { home: 4000, society: 50000, business: 150000 };
+
 export default function SavingsCalculator() {
-  const [bill, setBill] = useState(4000);
+  const [bill, setBill] = useState(DEFAULT_BILL.home);
   const [type, setType] = useState('home');
+
+  // Reset bill to type-appropriate default when switching property type
+  useEffect(() => {
+    setBill(DEFAULT_BILL[type]);
+  }, [type]);
 
   const r = useMemo(() => {
     const units = bill / TARIFF[type];
     let kw = Math.max(1, Math.ceil(units / GEN_PER_KW));
-    if (type === 'home') kw = Math.min(kw, 10);
+    if (type === 'home') kw = Math.min(kw, 12);
     const monthlyGen = kw * GEN_PER_KW;
     const monthlySaving = Math.min(bill, monthlyGen * TARIFF[type]);
     let subsidy = 0;
@@ -48,8 +62,8 @@ export default function SavingsCalculator() {
               <label htmlFor="calc-bill" className="fw-bold text-navy mb-0">Average monthly electricity bill</label>
               <span className="calc-val">{fmt(bill)}</span>
             </div>
-            <input id="calc-bill" type="range" className="calc-range" min={1000} max={type === 'business' ? 300000 : 30000} step={type === 'business' ? 5000 : 500} value={Math.min(bill, type === 'business' ? 300000 : 30000)} onChange={(e) => setBill(Number(e.target.value))} />
-            <div className="d-flex justify-content-between small text-muted mt-1"><span>₹1,000</span><span>{type === 'business' ? '₹3,00,000' : '₹30,000'}</span></div>
+            <input id="calc-bill" type="range" className="calc-range" min={type === 'business' ? 5000 : 1000} max={sliderMax(type)} step={type === 'business' ? 5000 : 500} value={Math.min(bill, sliderMax(type))} onChange={(e) => setBill(Number(e.target.value))} />
+            <div className="d-flex justify-content-between small text-muted mt-1"><span>{type === 'business' ? '₹5,000' : '₹1,000'}</span><span>{fmt(sliderMax(type))}</span></div>
             <p className="small text-muted mt-4 mb-0">
               Assumes ~{GEN_PER_KW} units/kW/month (Gujarat average) and ₹{TARIFF[type]}/unit tariff. Subsidy as per PM Surya Ghar for residential and group-housing consumers.
             </p>

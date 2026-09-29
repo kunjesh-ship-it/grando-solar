@@ -3,6 +3,7 @@ import PartnersMarquee from '@/components/sections/PartnersMarquee';
 import SolutionsGrid from '@/components/sections/SolutionsGrid';
 // import ProblemSolution from '@/components/home/ProblemSolution';
 import WhyGrando from '@/components/home/WhyGrando';
+import ReadyToGoSolar from '@/components/sections/ReadyToGoSolar';
 // import SavingsCalculator from '@/components/home/SavingsCalculator';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import SubsidyBand from '@/components/home/SubsidyBand';
@@ -10,6 +11,8 @@ import AboutIntro from '@/components/home/AboutIntro';
 import SiteTypes from '@/components/home/SiteTypes';
 import WhatWeGive from '@/components/sections/WhatWeGive';
 import SocialProof from '@/components/home/SocialProof';
+import CIProjects from '@/components/home/CIProjects';
+import ResidentialProjects from '@/components/home/ResidentialProjects';
 // import LocationsGrid from '@/components/sections/LocationsGrid';
 // import FaqSection from '@/components/sections/FaqSection';
 import BlogPreview from '@/components/home/BlogPreview';
@@ -30,8 +33,12 @@ export default function HomePage() {
       <Hero />
       <PartnersMarquee />
       <SolutionsGrid />
+      <CIProjects />
+
       {/* <ProblemSolution /> */}
       <WhyGrando />
+      <ReadyToGoSolar />
+      <ResidentialProjects />
       {/* <SavingsCalculator /> */}
       <ProcessTimeline />
       <SubsidyBand />

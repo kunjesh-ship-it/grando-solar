@@ -21,8 +21,9 @@ export default function LocationsGrid({ showHeader = true }) {
                 </div>
                 <h3>{l.city}</h3>
                 <p className="small">{l.address}</p>
-                <div className="d-flex flex-wrap gap-2 mt-3">
+                <div className="d-flex flex-wrap gap-2 mt-3" style={{ position: 'relative', zIndex: 2 }}>
                   <a href={l.phoneHref} className="btn-gs navy sm"><Icon name="phone" size={16} /> {l.phone}</a>
+                  <a href={l.whatsappHref} target="_blank" rel="noopener" className="btn-gs green sm"><Icon name="whatsapp" size={16} /> WhatsApp</a>
                   <a href={l.map} target="_blank" rel="noopener" className="btn-gs outline-navy sm">Directions</a>
                 </div>
                 <Link href={`/locations/solar-company-in-${l.slug}`} className="stretched-link" aria-label={`Solar company in ${l.city}`} />

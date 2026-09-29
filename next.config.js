@@ -4,6 +4,9 @@ const nextConfig = {
   images: { formats: ['image/avif', 'image/webp'] },
   trailingSlash: false,
   allowedDevOrigins: [
+    '192.168.0.48',
+    '192.168.0.48:3000',
+    '192.168.0.48:3001',
     '192.168.0.24',
   ],
 };
