@@ -5,8 +5,7 @@ import './home.css';
 
 const C_I_VIDEOS = [
   { id: 'ci-1', label: '', src: "/images/video/ci-01.mp4" },
-  { id: 'ci-2', label: '', src: "/images/video/ci-02.mp4" }, 
-  
+  { id: 'ci-2', label: '', src: "/images/video/ci-02.mp4" }, ~
   { id: 'ci-3', label: '', src: "/images/video/ci-03.mp4" },
   { id: 'ci-4', label: '', src: "/images/video/ci-04.mp4" },
 ];
