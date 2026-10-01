@@ -11,7 +11,7 @@ export default function AboutIntro() {
         <div className="row g-5 align-items-center">
           <div className="col-lg-6">
             <div className="feature-img reveal-img">
-              <Image src="/images/team-carport.jpg" alt="Grando Solar engineer at an elevated carport solar installation" fill sizes="(max-width: 991px) 100vw, 50vw" />
+              <Image src="/images/about-us/overview.png" alt="Grando Solar engineer at an elevated carport solar installation" fill sizes="(max-width: 991px) 100vw, 50vw" />
               <div className="float-badge">
                 <span className="icon-badge"><Icon name="shield" /></span>
                 <div><strong>Licensed</strong><span>Electrical contractor · EPC</span></div>
