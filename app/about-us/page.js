@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   title: 'About Grando Solar – Solar EPC Company in Surat, Gujarat',
   description: 'Grando Solar Energy is a brand of Om Shanti Machineries Exim: a licensed solar EPC company with storm-safe structures, Waaree partnership and offices in Surat, Vadodara, Vapi, Bharuch and Ahmedabad.',
   path: '/about-us',
-  image: '/images/team-carport.jpg',
+  image: '/images/about-us/banner.png',
 });
 
 const values = [
@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about-us' }])} />
-      <PageHero tag="About us" title="Powering tomorrow with clean energy today." lead="Grando Solar Energy is a solar EPC company headquartered in Surat and a brand of Om Shanti Machineries Exim. We make going solar simple, safe and rewarding for homes, societies, businesses and industries across Gujarat." crumbs={[{ name: 'About Us' }]} image="/images/team-carport.jpg" />
+      <PageHero tag="About us" title="Powering tomorrow with clean energy today." lead="Grando Solar Energy is a solar EPC company headquartered in Surat and a brand of Om Shanti Machineries Exim. We make going solar simple, safe and rewarding for homes, societies, businesses and industries across Gujarat." crumbs={[{ name: 'About Us' }]} image="/images/about-us/banner.png" />
 
       <section className="section">
         <div className="container">
@@ -49,7 +49,7 @@ export default function AboutPage() {
             </div>
             <div className="col-lg-6">
               <div className="feature-img reveal-img">
-                <Image src="/images/structure-wide.png" alt="Grando Solar elevated storm-safe structure" fill sizes="(max-width: 991px) 100vw, 50vw" />
+                <Image src="/images/about-us/overview.png" alt="Grando Solar elevated storm-safe structure" fill sizes="(max-width: 991px) 100vw, 50vw" />
                 <div className="float-badge">
                   <span className="icon-badge"><Icon name="pin" /></span>
                   <div><strong>5 cities</strong><span>Surat · Vadodara · Vapi · Bharuch · Ahmedabad</span></div>

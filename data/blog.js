@@ -4,7 +4,7 @@ export const posts = [
     title: 'Grando Solar’s Easy Installation Process',
     excerpt: 'From the free site visit to net metering — what actually happens when you go solar with Grando, step by step.',
     date: '2025-07-08',
-    image: '/images/team-image.png',
+    image: '/images/blog/blog-1.jpg',
     category: 'Process',
     body: [
       'Going solar feels complicated only because most companies never explain the process. At Grando Solar, every project follows the same six steps, and you always know which step you are on.',
@@ -21,7 +21,7 @@ export const posts = [
     title: 'How Solar Energy Saves You Money Every Month',
     excerpt: 'Net metering, subsidy and EMI explained simply — why a solar EMI is usually lower than the bill it replaces.',
     date: '2025-07-08',
-    image: '/images/home-roof.jpg',
+    image: '/images/blog/blog-2.png',
     category: 'Savings',
     body: [
       'A rooftop solar plant saves money in three ways: it replaces the units you buy from the grid, it exports surplus units that are credited to your bill, and the government pays a large part of the cost upfront through subsidy.',
@@ -36,7 +36,7 @@ export const posts = [
     title: 'Is Your Business Ready for Solar? Here’s Why It Should Be',
     excerpt: 'Commercial tariffs, daytime loads and unused roofs make Gujarat businesses ideal candidates for rooftop solar.',
     date: '2025-07-08',
-    image: '/images/panel-array.jpg',
+    image: '/images/blog/blog-3.png',
     category: 'Commercial',
     body: [
       'Commercial and industrial consumers pay some of the highest tariffs in Gujarat, and most of that consumption happens during daylight hours — exactly when a solar plant produces the most.',

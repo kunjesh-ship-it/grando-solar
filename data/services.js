@@ -4,8 +4,8 @@ export const services = [
     title: 'Free Site Survey & 3D Design',
     short: 'Shadow analysis, roof measurement and a 3D layout before you commit a rupee.',
     icon: 'ruler',
-    heroImage: '/images/banner-7.png',
-    image: '/images/site-survey-3d-design.png',
+    heroImage: '/images/site-survey-3d-design/main-banner1.png',
+    image: '/images/site-survey-3d-design/overview1.png',
     intro:
       'Every Grando Solar project starts with a free visit. Our engineer measures the roof, checks structure and wiring, runs a shadow analysis and prepares a 3D layout with a generation estimate — so you see exactly what you are buying.',
     steps: [
@@ -21,8 +21,8 @@ export const services = [
     title: 'Solar EPC Installation',
     short: 'Engineering, procurement and construction under one licensed roof.',
     icon: 'tools',
-    heroImage: '/images/banner-8.png',
-    image: '/images/solar-epc-installation.png',
+    heroImage: '/images/solar-epc-installation/main-banner.png',
+    image: '/images/solar-epc-installation/overview.png',
     intro:
       'Grando Solar is an electrical-contractor-licensed EPC company. We engineer the structure, procure Tier-1 components, install with our own trained team and commission the plant with DISCOM — one accountable partner from start to finish.',
     steps: [
@@ -38,8 +38,8 @@ export const services = [
     title: 'Subsidy & Loan Assistance',
     short: 'PM Surya Ghar subsidy filing, DISCOM approvals and loan facilitation — handled for you.',
     icon: 'rupee',
-    heroImage: '/images/banner-9.png',
-    image: '/images/subsidy-loan-assistance.png',
+    heroImage: '/images/subsidy-loan-assistance/main-banner.png',
+    image: '/images/subsidy-loan-assistance/overview1.png',
     intro:
       'Subsidy paperwork is the number-one reason families delay solar. As a government-approved channel partner with Gujarat DISCOMs, Grando Solar registers your application, coordinates inspection and net metering, and helps you access loan facilities so the plant pays for itself from month one.',
     steps: [
@@ -55,8 +55,8 @@ export const services = [
     title: 'Maintenance, AMC & Monitoring',
     short: 'Keep generation high for 25 years with monitoring, cleaning and service support.',
     icon: 'monitor',
-    heroImage: '/images/banner-10.png',
-    image: '/images/maintenance-amc-monitoring.png',
+    heroImage: '/images/maintenance-amc-monitoring/main-banner.png',
+    image: '/images/maintenance-amc-monitoring/overview.png',
     intro:
       'A solar plant is a 25-year asset. Grando Solar provides real-time monitoring, scheduled cleaning, preventive checks and a dedicated after-sales team across Surat, Vadodara, Vapi, Bharuch and Ahmedabad, so your plant keeps performing as designed.',
     steps: [
