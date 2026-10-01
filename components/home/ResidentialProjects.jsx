@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import SectionHeader from '@/components/ui/SectionHeader';
-import './home.css';
+import './home.css'; 
 
 const RESIDENTIAL_VIDEOS = [
   { id: 'res-1', label: '', src: "/images/r-1.mp4" },
