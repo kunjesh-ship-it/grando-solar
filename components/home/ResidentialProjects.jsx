@@ -4,10 +4,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import './home.css';
 
 const RESIDENTIAL_VIDEOS = [
-  { id: 'res-1', label: '', src: "/images/video/r-01.mp4" },
-  { id: 'res-2', label: '', src: "/images/video/r-02.mp4" },
-  { id: 'res-3', label: '', src: "/images/video/r-03.mp4" },
-  { id: 'res-4', label: '', src: "/images/video/r-04.mp4" },~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  { id: 'res-1', label: '', src: "/images/r-1.mp4" },
+  { id: 'res-2', label: '', src: "/images/r-2.mp4" },
+  { id: 'res-3', label: '', src: "/images/r-3.mp4" },
+  { id: 'res-4', label: '', src: "/images/r-4.mp4" },
 ];
 
 export default function ResidentialProjects() {
@@ -15,9 +15,9 @@ export default function ResidentialProjects() {
   const [unmuteId, setUnmuteId] = useState(null);
 
   const toggleMute = (id) => {
-    setUnmuteId((prev) => (prev === id ? null : id));~
+    setUnmuteId((prev) => (prev === id ? null : id));
   };
-~~~
+
   return (
     <section className="section-sm" id="residential-projects">
       <div className="container">
